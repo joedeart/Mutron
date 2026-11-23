@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p dist && cp app/* dist/",
+    "build": "mkdir -p dist && cp index.html style.css game.js manifest.webmanifest register-sw.js sw.js dist/",
     "android:setup": "npm run build && npx cap add android && npx cap sync android",
     "android:sync": "npm run build && npx cap sync android"
   },
