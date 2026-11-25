@@ -1,3 +1,4 @@
+// Keep this build in sync with the latest UI fixes.
 (()=>{
 const $=id=>document.getElementById(id), bpm=$('bpm'), drum=$('drum'), lights=[...$('beatLights').children];
 const tolerances={easy:150,medium:100,hard:50};
