@@ -24,3 +24,14 @@ These behaviours must remain working whenever audio, timing, visuals, or setting
 - After a miss, discard stale scheduled beat records and pending silent beats.
 - Restart the audible beat schedule from the current audio clock; do not catch up by rapidly scheduling old beats.
 - Keep the audio clock as the scoring reference and preserve the original pointer event timestamp.
+
+
+## Visual pulse and microphone input
+- The large drum does not pulse automatically on metronome beats; only the beat lights do.
+- The large drum animates when a touchscreen hit is made.
+- Microphone permission can be granted or denied without breaking touchscreen play.
+- With microphone enabled, real drum impacts trigger one virtual hit; ordinary room noise should not trigger repeated hits.
+- Microphone detection does not play the virtual drum sound back into the microphone input.
+- Stop microphone mode and confirm the microphone indicator/button returns to OFF.
+- Test microphone sensitivity in a quiet room and near the physical drum; headphones are recommended.
+- Confirm touchscreen scoring and silent-mode recovery are unchanged when microphone mode is OFF.
