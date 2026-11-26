@@ -40,6 +40,10 @@ jobs:
       - name: Sync Capacitor
         run: npx cap sync android
 
+      - name: Add Android microphone permissions
+        run: |
+          sed -i '/<application/i\    <uses-permission android:name="android.permission.RECORD_AUDIO" />\n    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />' android/app/src/main/AndroidManifest.xml
+
       - name: Build APK
         run: |
           cd android
