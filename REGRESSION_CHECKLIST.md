@@ -30,7 +30,10 @@ These behaviours must remain working whenever audio, timing, visuals, or setting
 - The large drum does not pulse automatically on metronome beats; only the beat lights do.
 - The large drum animates when a touchscreen hit is made.
 - Microphone permission can be granted or denied without breaking touchscreen play.
-- With microphone enabled, real drum impacts trigger one virtual hit; ordinary room noise should not trigger repeated hits.
+- Microphone startup calibrates background noise for 1.5 seconds; keep the drum quiet during calibration.
+- Microphone uses a noise-relative threshold, a 300 ms cooldown, and must return below its release threshold before it can trigger again.
+- With microphone enabled, one real drum impact triggers one virtual hit; ordinary room noise should not trigger hits or repeated hits.
+- Test in a quiet room and a normal room; verify High, Medium, and Low sensitivity respond in the expected order.
 - Microphone detection does not play the virtual drum sound back into the microphone input.
 - Stop microphone mode and confirm the microphone indicator/button returns to OFF.
 - Test microphone sensitivity in a quiet room and near the physical drum; headphones are recommended.
